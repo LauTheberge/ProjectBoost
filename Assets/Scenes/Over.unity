@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1923987314978735716, guid: 83a503d6b854fdf4c977d34f54329ee2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.13
+      value: 1.278
       objectReference: {fileID: 0}
     - target: {fileID: 1923987314978735716, guid: 83a503d6b854fdf4c977d34f54329ee2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 440792187}
   - component: {fileID: 440792186}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Fuel
   m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -430,7 +430,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -643,7 +643,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8864062281711722432, guid: dd96e117d84931b488cfb72890812c35, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8864062281711722432, guid: dd96e117d84931b488cfb72890812c35, type: 3}
       propertyPath: m_LocalScale.y
