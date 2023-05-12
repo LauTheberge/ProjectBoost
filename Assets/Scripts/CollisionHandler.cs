@@ -3,8 +3,21 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] AudioClip success;
+    [SerializeField] AudioClip crash;
+
+    AudioSource audioSource;
+
+    bool isTransitioning = false;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void OnCollisionEnter(Collision other)
     {
+        if(isTransitioning) { return; }
         switch(other.gameObject.tag)
         {
             case "Friendly":
@@ -12,14 +25,14 @@ public class CollisionHandler : MonoBehaviour
                 break;
             case "Finish":
                 Debug.Log("Victory!");
-                loadNextLevel();
+                StartSuccessSequence();
                 break;
             case "Fuel":
                 Debug.Log("Fuel boost!");
                 break;
             default:
                 Debug.Log("Boom, you're dead!");
-                reloadLevel();
+                StartCrashSequence();
                 break;
         }
     }
@@ -40,5 +53,23 @@ public class CollisionHandler : MonoBehaviour
         }
         else { SceneManager.LoadScene(nextLevel); }
 
+    }
+
+    void StartCrashSequence()
+    {
+        isTransitioning = true;
+        audioSource.Stop();
+        audioSource.PlayOneShot(crash);
+        GetComponent<Movement>().enabled = false;
+        Invoke("reloadLevel", 1);
+    }
+
+    void StartSuccessSequence()
+    {
+        isTransitioning = true;
+        audioSource.Stop();
+        audioSource.PlayOneShot(success);
+        GetComponent<Movement>().enabled = false;
+        Invoke("loadNextLevel", 1);
     }
 }
