@@ -9,6 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Over.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Under.unity
+    path: Assets/Scenes/under.unity
     guid: 03ac99266fe6f844e982889053cd1ca2
+  - enabled: 1
+    path: Assets/Scenes/overUnder.unity
+    guid: 0c48264a7ac59a34db86b2dfbbeb851e
+  - enabled: 1
+    path: Assets/Scenes/Tunnel.unity
+    guid: 0addc832849242344b32502bf9627eea
+  - enabled: 1
+    path: Assets/Scenes/Moving obstacle.unity
+    guid: b9cd7c85aa942d94c8ec608ee0b2f5d5
+  - enabled: 1
+    path: Assets/Scenes/downUp.unity
+    guid: 4827c1e595cbb3e418d6f6a4fdc69c4d
+  - enabled: 1
+    path: Assets/Scenes/SimpleBackTracking.unity
+    guid: f613d5e588117e642a002e99344478ec
+  - enabled: 1
+    path: Assets/Scenes/Squish obstacle.unity
+    guid: 97d0fead66cc9894b9ab6116978be5d1
   m_configObjects: {}
